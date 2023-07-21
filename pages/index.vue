@@ -20,35 +20,43 @@ defineComponent({
 <template>
   <div class="page-wrapper">
     <n-spin v-if="loading" size="large" />
-    <div v-else class="content-wrapper daniel">
-      <div class="hero">
-        <div class="hero-left">
-          <h1>Are you ready to unleash your inner party animal !?</h1>
-
+    <div v-else>
+      <a href="/">
+        <img class="logo" src="../assets/images/LogoNoBG400px.png">
+      </a>
+      <div class="content-wrapper daniel">
+        <div class="hero">
+          <div class="hero-left">
+            <h1>Are you ready to unleash your inner party animal !?</h1>
+          </div>
+          <div class="hero-right">
+            <h2>Spend a night out in Lisbon and meet local residents and fellow travelers on this pub crawl that introduces you to one of the best nightlife neighborhoods in the city.</h2>
+          <div class="button-wrapper">
+            <a href="#carousel">Explore ↓</a>
+            <a href="https://waytogopubcrawl.myshopify.com/" target=”_blank”>Shop →</a>
+          </div>
+          </div>
         </div>
-        <div class="hero-right">
-          <h2>A pubcrawl and a night to never forget</h2>
-        </div>
+        <NCarousel id="carousel" show-arrow autoplay class="carousel">
+        <img
+          class="carousel-img"
+          src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
+        >
+        <img
+          class="carousel-img"
+          src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg"
+        >
+        <img
+          class="carousel-img"
+          src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg"
+        >
+        <img
+          class="carousel-img"
+          src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg"
+        >
+        </NCarousel>
+        <!-- <NButton class="ticket-button" ghost size="large" @click="openTicketBroker" attr-type="button">Get your tickets now</NButton> -->
       </div>
-      <!-- <NCarousel show-arrow autoplay class="carousel">
-      <img
-        class="carousel-img"
-        src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
-      >
-      <img
-        class="carousel-img"
-        src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg"
-      >
-      <img
-        class="carousel-img"
-        src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg"
-      >
-      <img
-        class="carousel-img"
-        src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg"
-      >
-      </NCarousel> -->
-      <NButton class="ticket-button" ghost size="large" @click="openTicketBroker" attr-type="button">Get your tickets now</NButton>
     </div>
   </div>
 </template>
@@ -63,6 +71,11 @@ defineComponent({
     url("https://db.onlinewebfonts.com/t/0a3950f239bb0d70dc6601d71a7074d9.woff")format("woff"),
     url("https://db.onlinewebfonts.com/t/0a3950f239bb0d70dc6601d71a7074d9.ttf")format("truetype"),
     url("https://db.onlinewebfonts.com/t/0a3950f239bb0d70dc6601d71a7074d9.svg#Barricada W01 Regular")format("svg");
+}
+.logo{
+  margin: 30px;
+  height: 70px;
+  width: auto;
 }
 .page-wrapper{
   display: flex;
@@ -80,7 +93,10 @@ defineComponent({
 
     .hero{
       display: flex;
+      min-height: 500px;
       height: 100%;
+      box-sizing: border-box;
+
       .hero-left{
         display: flex;
         align-items: flex-start;
@@ -90,23 +106,26 @@ defineComponent({
       .hero-right{
         width: 50%;
         display: flex;
-
-
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        h2{
+          max-width: 80%;
+          margin-bottom: 40px;
+        }
+        a{
+          text-decoration: none;
+          color: #888888;
+          font-size: 30px;
+          margin: 20px;
+        }
       }
     }
 
-    h1{
-      font-family: Barricada;
-      font-size: 80px;
-    }
-    h2{
-      font-family: "AvenirNext LT Pro", arial, helvetica, sans-serif;
-
-    }
     .carousel{
-      margin-top: 20px;
+      margin-top: 100px;
       width: 100%;
-      max-width: 900px;
+      /* max-width: 900px; */
       aspect-ratio: 16/9;
       .carousel-img {
         width: 100%;

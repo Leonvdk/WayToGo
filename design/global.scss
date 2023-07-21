@@ -4,10 +4,24 @@
 }
 
 html{
-  background: #F7F2F0;
+  background: #f7f3e5;
+
+  *{
+    font-family: "AvenirNext LT Pro", arial, helvetica, sans-serif;
+  }
+  h1{
+  font-family: Barricada;
+  font-size: 80px;
+}
+h2{
+  font-size: 30px;
+}
+.logo{
+  height: 70px;
+  width: 70px;
+  background-image: url("../assets/images/LogoNoBG400px.png");
+  background-size: cover;
+}
 }
 
-h1{
-  font-family: natureSpirit;
-  font-size: 50px;
-}
+
