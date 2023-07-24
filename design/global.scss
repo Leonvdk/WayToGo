@@ -2,9 +2,19 @@
   font-family: natureSpirit;
   src: url(@/assets/fonts/NatureSpiritRough.otf);
 }
+@font-face {
+    font-family: "Barricada";
+    src: url("https://db.onlinewebfonts.com/t/0a3950f239bb0d70dc6601d71a7074d9.eot");
+    src: url("https://db.onlinewebfonts.com/t/0a3950f239bb0d70dc6601d71a7074d9.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/0a3950f239bb0d70dc6601d71a7074d9.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/0a3950f239bb0d70dc6601d71a7074d9.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/0a3950f239bb0d70dc6601d71a7074d9.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/0a3950f239bb0d70dc6601d71a7074d9.svg#Barricada W01 Regular")format("svg");
+}
 
 html{
-  background: #f7f3e5;
+  background: #fffef8;
+  scroll-behavior: smooth;
 
   *{
     font-family: "AvenirNext LT Pro", arial, helvetica, sans-serif;
@@ -12,16 +22,14 @@ html{
   h1{
   font-family: Barricada;
   font-size: 80px;
-}
-h2{
-  font-size: 30px;
-}
-.logo{
-  height: 70px;
-  width: 70px;
-  background-image: url("../assets/images/LogoNoBG400px.png");
-  background-size: cover;
-}
+  }
+  h2{
+    font-size: 30px;
+  }
+  h3{
+    font-size: 30px;
+    
+  }
 }
 
 

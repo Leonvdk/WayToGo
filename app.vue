@@ -12,6 +12,12 @@ import {
 const naive = create({
   components: [NButton]
 })
+useHead({
+  title: 'Pub Crawl Lisbon',
+  meta: [
+    { name: 'The best Lisbon pub crawl', content: 'Info on the best pub crawl in Lisbon' }
+  ]
+})
 
 const app = createApp()
 app.use(naive)

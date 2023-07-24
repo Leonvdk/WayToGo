@@ -6,4 +6,8 @@ export default {
     '@/design/reset.scss',
     '@/design/global.scss',
   ],
+    loading: {
+    color: '#F6C20E',
+    height: '5px'
+  }
 };
