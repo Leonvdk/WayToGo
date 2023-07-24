@@ -100,6 +100,8 @@ defineComponent({
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  max-width: 1200px;
+  margin: auto;
   
 }
   .content-wrapper.daniel{
@@ -215,6 +217,7 @@ defineComponent({
     }
     .midpage-logo{
       width: 50%;
+      margin: 80px auto;
     }
     .ticket-button{
       margin-top: 20px;
