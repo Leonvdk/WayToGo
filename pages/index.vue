@@ -35,7 +35,7 @@ defineComponent({
           <div class="hero-right">
             <h2>Spend a night out in Lisbon and meet local residents and fellow travelers on this pub crawl that introduces you to one of the best nightlife neighborhoods in the city.</h2>
           <div class="button-wrapper">
-            <a href="#carousel">Explore ↓</a>
+            <a href="#tours-section">Explore ↓</a>
             <a href="https://waytogopubcrawl.myshopify.com/" target=”_blank”>Shop →</a>
           </div>
           </div>
@@ -60,7 +60,7 @@ defineComponent({
         </NCarousel> -->
 <!--         <NButton class="ticket-button" ghost size="large" @click="openTicketBroker" attr-type="button">Get your tickets now</NButton> -->
       <img class="midpage-logo" src="../assets/images/LogoNoBG.png">
-      <div class="tours-section">
+      <div class="tours-section" id="tours-section">
         <div class="left">
           <div class="card" @click="openTicketBroker">
             <div>
@@ -163,7 +163,7 @@ defineComponent({
         cursor: pointer;
         &:hover{
           transform: scale(1.05);
-          box-shadow: 5px 4px 20px #00000025;
+          /* box-shadow: 5px 4px 20px #00000025; */
         }
 
         
