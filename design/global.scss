@@ -1,8 +1,12 @@
 @import url("./variables.scss");
 
 @font-face {
-  font-family: natureSpirit;
-  src: url(@/assets/fonts/NatureSpiritRough.otf);
+  font-family: "natureSpirit";
+  src: url("@/assets/fonts/NatureSpiritRough.otf");
+}
+@font-face {
+  font-family: "neutraFace";
+    src: url("@/assets/fonts/Neutraface-Text-Book.otf");
 }
 @font-face {
     font-family: "Barricada";
@@ -17,12 +21,13 @@
 
 
 html{
-  background: #fffef8;
+  background: #ffffff;
   scroll-behavior: smooth;
 
   *{
-    font-family: "AvenirNext LT Pro", arial, helvetica, sans-serif;
+    font-family: neutraFace;
     box-sizing: border-box;
+    font-weight: 400;
   }
   h1{
     font-size: 3.2rem;
@@ -40,6 +45,7 @@ html{
     max-width: 1400px;
     padding: 55px 3vw;
     display:flex;
+    position: relative;
   }
 }
 

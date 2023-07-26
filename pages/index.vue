@@ -18,6 +18,12 @@ defineComponent({
   name: 'Home',
 });
 
+({
+  title: 'My App',
+  meta: [
+    { name: 'description', content: 'My amazing site.' }
+  ]})
+
 
 
 </script>
@@ -57,11 +63,11 @@ defineComponent({
             src="../assets/images/photos/pubcrawl3.png"
           >
           </NCarousel>
-          <NButton class="ticket-button" size="large" @click="openTicketBroker" attr-type="button" type="warning">Get your tickets</NButton>
+          <NButton class="ticket-button" size="large" @click="openTicketBroker" attr-type="button" type="warning" :bordered="false">Get your tickets</NButton>
+          <img class="midpage-logo" src="../assets/images/retro-logo-700px.png">
 
         </section>
-      <!-- <img class="midpage-logo" src="../assets/images/retro-logo-700px.png"> -->
-      <section class="tours-section" id="tours-section">
+        <section class="tours-section" id="tours-section">
         <div class="left">
           <div class="card" @click="openTicketBroker">
             <div>
@@ -160,33 +166,36 @@ defineComponent({
       .card{
         width: 80%;
         box-sizing: border-box;
-        background-color: #afb5c165;
-        border-radius: 1.5em;
+        background-color: #F0F0F0;
+        border-radius: 1em;
         aspect-ratio: 6/9;
         transition: all ease-in-out .2s;
         display: flex;
         flex-direction: column;
         justify-content:space-between;
-        padding: 10% 10%;
+        padding: 10% 8%;
         cursor: pointer;
+        box-shadow: inset -5px -5px 5px #00000025, inset 2px 2px 5px #00000010;
+
         &:hover{
-          transform: scale(1.05);
-          /* box-shadow: 5px 4px 20px #00000025; */
+          transform: scale(1.01);
+          filter:brightness(105%);
+        box-shadow: inset -5px -5px 5px #00000045, inset 2px 2px 5px #00000020;
         }
         
         h2{
           font-family: Barricada;
-          font-size: 3rem;
+          font-size: 2.3rem;
         }
         h3{
           color: #00000065;
-          font-size: 1.5rem;
+          font-size: 1.2rem;
         }
         .tour-card-image{
           max-width: 90%;
           align-self: flex-end;
           position: relative;
-          left: 15%;
+          left: 5%;
         }
         .pricing{
           justify-self: flex-end;
@@ -201,14 +210,14 @@ defineComponent({
       align-items: center;
       }
       .right{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      
-      .card{
-        margin-top: 150px;
-      }
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        
+        .card{
+          margin-top: 150px;
+        }
       }
     }
 
@@ -224,8 +233,14 @@ defineComponent({
       }
     }
     .midpage-logo{
-      width: 50%;
+      width: 10%;
       margin: 80px auto;
+      filter: grayscale(100);
+      opacity: 40%;
+      position: absolute;
+      top: 100px;
+      left: 45%;
+
     }
     .ticket-button{
       margin-top: 20px;
@@ -237,8 +252,12 @@ defineComponent({
       align-self: center;
       margin-top: 50px;
       border-radius: .5em;
+      transition: all .2s ease-out;
+      box-shadow: inset -5px -5px 5px #00000025,  inset 2px 2px 5px #00000010;
       &:hover{
         filter: brightness(110%);
+        transform: scale(1.01);
+        box-shadow: inset -5px -5px 5px #00000045,  inset 2px 2px 5px #00000020;
       }
       * {
         font-family: Barricada;
@@ -286,27 +305,21 @@ defineComponent({
         justify-content: center;
         align-items: center;
         .card{
-          /* height: 500px; */
           width: 100%;
-          background-color: #afb5c165;
-          border-radius: 1.5em;
-          aspect-ratio: 6/7;
+          aspect-ratio: 6/6;
           padding: 10% 10%;
-  
+
           .tour-card-image{
-            max-width: 90%;
-            align-self: flex-end;
-            position: relative;
-            left: 15%;
+            max-width: 50%;
+            justify-self: center;
+            align-self: center;
+            left: 0;
             &.wine{
-              height: 60%;
-              opacity: 80%;
-              margin-top: 20px;
+              max-width: 80%;
             }
           }
           .pricing{
-            justify-self: flex-end;
-            font-weight: 100;
+            font-size: 1rem;
           }
         }
         .left{
