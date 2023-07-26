@@ -36,7 +36,7 @@ defineComponent({
             <h2>Spend a night out in Lisbon and meet local residents and fellow travelers on this pub crawl that introduces you to one of the best nightlife neighborhoods in the city.</h2>
           <div class="button-wrapper">
             <a href="#tours-section">Explore ↓</a>
-            <a href="https://waytogopubcrawl.myshopify.com/" target=”_blank”>Shop →</a>
+            <a href="https://waytogopubcrawl.myshopify.com/collections/all" target=”_blank”>Shop →</a>
           </div>
           </div>
         </section>
@@ -55,7 +55,7 @@ defineComponent({
             src="../assets/images/photos/pubcrawl3.png"
           >
           </NCarousel>
-          <!--         <NButton class="ticket-button" ghost size="large" @click="openTicketBroker" attr-type="button">Get your tickets now</NButton> -->
+           <NButton class="ticket-button" ghost size="large" @click="openTicketBroker" attr-type="button">Get your tickets</NButton>
 
         </section>
       <!-- <img class="midpage-logo" src="../assets/images/retro-logo-700px.png"> -->
@@ -247,6 +247,17 @@ defineComponent({
           justify-content: flex-end;
         }
       }
+      .carousel{
+        margin-top: 100px;
+        width: 100%;
+        aspect-ratio: 9/16;
+        .carousel-img {
+          width: 100%;
+          margin: 0;
+          object-fit: cover;
+          aspect-ratio: 9/16;
+        }
+    }
       .tours-section{
         display: flex;
         flex-direction: column;
