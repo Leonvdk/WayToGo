@@ -64,7 +64,7 @@ defineComponent({
           >
           </NCarousel>
           <NButton class="ticket-button" size="large" @click="openTicketBroker" attr-type="button" type="warning" :bordered="false">Get your tickets</NButton>
-          <img class="midpage-logo" src="../assets/images/retro-logo-700px.png">
+          <img class="water-mark" src="../assets/images/retro-logo-700px.png">
 
         </section>
         <section class="tours-section" id="tours-section">
@@ -75,7 +75,7 @@ defineComponent({
               <h3>Connect to new people</h3>
             </div>
             <img class="tour-card-image" src="../assets/images/retro-logo-700px.png">
-            <h3 class="pricing">€18,-</h3>
+            <h3 class="pricing">€18,- p.p</h3>
           </div>
         </div>
         <div class="right">
@@ -84,7 +84,7 @@ defineComponent({
               <h2>Private Groups</h2>
               <h3>Go party with your friends</h3>
             </div>
-            <img class="tour-card-image wine" src="../assets/images/logo-group.png">
+            <img class="tour-card-image group" src="../assets/images/logo-group.png">
             <h3 class="pricing">From €159,-</h3>
           </div>
         </div>
@@ -156,6 +156,7 @@ defineComponent({
     }
     .carousel-section{
       flex-direction: column;
+      justify-content: flex-start;
     }
     .tours-section{
       display: flex;
@@ -225,6 +226,9 @@ defineComponent({
       margin-top: 100px;
       width: 100%;
       aspect-ratio: 16/9;
+      border-radius: .5em;
+      
+      
       .carousel-img {
         width: 100%;
         margin: 0;
@@ -232,7 +236,7 @@ defineComponent({
         aspect-ratio: 16/9;
       }
     }
-    .midpage-logo{
+    .water-mark{
       width: 10%;
       margin: 80px auto;
       filter: grayscale(100);
@@ -314,12 +318,12 @@ defineComponent({
             justify-self: center;
             align-self: center;
             left: 0;
-            &.wine{
+            &.group{
               max-width: 80%;
             }
           }
           .pricing{
-            font-size: 1rem;
+            /* font-size: 1rem; */
           }
         }
         .left{
