@@ -25,7 +25,7 @@ defineComponent({
     <n-spin v-if="loading" size="large" />
     <div v-else>
       <a href="/">
-        <img class="logo" src="../assets/images/LogoNoBG400px.png">
+        <img class="logo" src="../assets/images/retro-logo-100px.png">
       </a>
       <div class="content-wrapper daniel">
         <div class="hero">
@@ -59,15 +59,15 @@ defineComponent({
         >
         </NCarousel> -->
 <!--         <NButton class="ticket-button" ghost size="large" @click="openTicketBroker" attr-type="button">Get your tickets now</NButton> -->
-      <img class="midpage-logo" src="../assets/images/LogoNoBG.png">
-      <div class="tours-section" id="tours-section">
+      <img class="midpage-logo" src="../assets/images/retro-logo-700px.png">
+      <section class="tours-section" id="tours-section">
         <div class="left">
           <div class="card" @click="openTicketBroker">
             <div>
               <h2>Pub Crawl</h2>
               <h3>Connect to new people</h3>
             </div>
-            <img class="tour-card-image" src="../assets/images/LogoNoBG.png">
+            <img class="tour-card-image" src="../assets/images/retro-logo-700px.png">
             <h3 class="pricing">€18,00</h3>
           </div>
         </div>
@@ -77,11 +77,11 @@ defineComponent({
               <h2>Group Activities</h2>
               <h3>Exciting tours around Lisbon</h3>
             </div>
-            <img class="tour-card-image" src="../assets/images/LogoNoBG.png">
+            <img class="tour-card-image" src="../assets/images/retro-logo-700px.png">
             <h3 class="pricing">Activities differ in price</h3>
           </div>
         </div>
-      </div>
+      </section>
       </div>
     </div>
   </div>
@@ -89,7 +89,7 @@ defineComponent({
 
 <style lang="scss">
 @import url(https://db.onlinewebfonts.com/c/0a3950f239bb0d70dc6601d71a7074d9?family=Barricada+W01+Regular);
-
+@import '../design/variables.scss';
 .logo{
   margin: 30px;
   height: 70px;
@@ -102,9 +102,12 @@ defineComponent({
   min-height: 100vh;
   max-width: 1200px;
   margin: auto;
+  box-sizing: border-box;
+
   
 }
   .content-wrapper.daniel{
+    box-sizing: border-box;
     padding: 70px 25px;
     min-height: 100%;
     display: flex;
@@ -137,7 +140,7 @@ defineComponent({
         a{
           text-decoration: none;
           color: #888888;
-          font-size: 30px;
+          font-size: 2em;
           margin: 20px;
           min-width: max-content;
           white-space: nowrap;
@@ -151,7 +154,6 @@ defineComponent({
       justify-content: center;
       align-items: center;
       .card{
-        /* height: 500px; */
         width: 80%;
         box-sizing: border-box;
         background-color: #afb5c165;
@@ -171,10 +173,11 @@ defineComponent({
         
         h2{
           font-family: Barricada;
-          font-size: 60px;
+          font-size: 3rem;
         }
         h3{
-          color: #00000065
+          color: #00000065;
+          font-size: 1.5rem;
         }
         .tour-card-image{
           max-width: 90%;
@@ -184,7 +187,8 @@ defineComponent({
         }
         .pricing{
           justify-self: flex-end;
-          font-weight: 100;
+          font-weight: 300;
+          font-size: 1.2rem;
         }
       }
       .left{
@@ -222,6 +226,73 @@ defineComponent({
     .ticket-button{
       margin-top: 20px;
       font-family: Barricada;
+    }
+  }
+
+  @media only screen and (max-width: 767px){
+    .content-wrapper.daniel{
+      .hero{
+        display: flex;
+        flex-direction: column;
+  
+        .hero-left{
+          display: flex;
+          align-items: flex-start;
+          width: 100%;
+  
+        }
+        .hero-right{
+          width: 100%;
+          margin-top: 50px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-end;
+        }
+      }
+      .tours-section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 90vh;
+        justify-content: center;
+        align-items: center;
+        .card{
+          /* height: 500px; */
+          width: 100%;
+          background-color: #afb5c165;
+          border-radius: 1.5em;
+          aspect-ratio: 6/9;
+          padding: 10% 10%;
+  
+          .tour-card-image{
+            max-width: 90%;
+            align-self: flex-end;
+            position: relative;
+            left: 15%;
+          }
+          .pricing{
+            justify-self: flex-end;
+            font-weight: 100;
+          }
+        }
+        .left{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .right{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        
+        .card{
+          margin-top: 60px;
+        }
+        }
+      }
     }
   }
 </style>

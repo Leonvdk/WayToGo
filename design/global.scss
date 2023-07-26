@@ -1,3 +1,5 @@
+@import url("./variables.scss");
+
 @font-face {
   font-family: natureSpirit;
   src: url(@/assets/fonts/NatureSpiritRough.otf);
@@ -12,24 +14,50 @@
     url("https://db.onlinewebfonts.com/t/0a3950f239bb0d70dc6601d71a7074d9.svg#Barricada W01 Regular")format("svg");
 }
 
+
+
 html{
   background: #fffef8;
   scroll-behavior: smooth;
 
   *{
     font-family: "AvenirNext LT Pro", arial, helvetica, sans-serif;
+    box-sizing: border-box;
   }
   h1{
-  font-family: Barricada;
-  font-size: 80px;
+    font-size: 3.2rem;
+    font-family: Barricada;
   }
   h2{
-    font-size: 30px;
+    font-size: 2rem;
   }
   h3{
-    font-size: 30px;
+    font-size: 2rem;
     
   }
 }
 
+
+
+// //------------- RESPONSIVE TEXT SCALING SECTION -------------------------
+//   html { 
+//     font-size: 1.125rem; 
+//   }
+
+//   @media screen and (max-width:1441px) 
+//   { 
+//     html { 
+//       font-size: calc(-179.00000000000384rem + 200.00000000000426vw); 
+//     } 
+// }
+//   @media screen and (max-width:10px) { 
+//     html { 
+//       font-size: calc(0.8126951092611863rem + 0.20811654526534862vw); 
+//     } 
+//   }
+//   @media screen and (max-width:479px) { 
+//     html { 
+//       font-size: calc(0.7494769874476988rem + 0.8368200836820083vw); 
+//     } 
+//   }
 

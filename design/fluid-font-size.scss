@@ -1,0 +1,9 @@
+
+@import "/design/variables.scss";
+
+  html { font-size: 1.125rem; }
+  @media screen and (max-width:--desktop) { html { font-size: calc(0.40729665071770327rem + 0.9569377990430623vw); } }
+  @media screen and (max-width:991px) { html { font-size: calc(0.44698660714285715rem + 0.8928571428571428vw); } }
+  @media screen and (max-width:767px) { html { font-size: calc(0.6671006944444444rem + 0.6944444444444444vw); } }
+  // @media screen and (max-width:479px) { html { font-size: calc(0.7494769874476988rem + 0.8368200836820083vw); } }
+
