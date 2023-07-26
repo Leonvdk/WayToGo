@@ -269,7 +269,7 @@ defineComponent({
       }
       .carousel{
         margin-top: 100px;
-        width: 100vw;
+        width: 100%;
         aspect-ratio: 9/16;
         .carousel-img {
           width: 100%;
