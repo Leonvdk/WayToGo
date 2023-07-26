@@ -19,7 +19,7 @@ useHead({
     { name: 'The best Lisbon pub crawl', content: 'Info on the best pub crawl in Lisbon' }
   ]
 })
-useSeoMeta({
+useServerSeoMeta({
   ogTitle: 'Pub Crawl Lisbon',
   description: 'We know the way to go! Join us on an amazing night out!',
   ogDescription: 'We know the way to go! Join us on an amazing night out!',
