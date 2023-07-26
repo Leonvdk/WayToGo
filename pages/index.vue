@@ -44,7 +44,7 @@ defineComponent({
             <h2>Spend a night out in Lisbon and meet local residents and fellow travelers on this pub crawl that introduces you to one of the best nightlife neighborhoods in the city.</h2>
           <div class="button-wrapper">
             <a href="#tours-section">Explore ↓</a>
-            <a href="https://waytogopubcrawl.myshopify.com/collections/all" target=”_blank”>Shop →</a>
+            <a href="https://waytogopubcrawl.myshopify.com/collections/all" target=”_blank”>T-shirts →</a>
           </div>
           </div>
         </section>
@@ -68,27 +68,47 @@ defineComponent({
 
         </section>
         <section class="tours-section" id="tours-section">
-        <div class="left">
-          <div class="card" @click="openTicketBroker">
-            <div>
-              <h2>Pub Crawl</h2>
-              <h3>Connect to new people</h3>
+          <div class="left">
+            <div class="card" @click="openTicketBroker">
+              <div>
+                <h2>Pub Crawl</h2>
+                <p class="card-sub-header">Connect to new people</p>
+              </div>
+              <img class="tour-card-image" src="../assets/images/retro-logo-700px.png">
+              <h3 class="pricing">€18,- p.p</h3>
             </div>
-            <img class="tour-card-image" src="../assets/images/retro-logo-700px.png">
-            <h3 class="pricing">€18,- p.p</h3>
           </div>
-        </div>
-        <div class="right">
-          <div class="card" @click="openActivitiesOverview">
-            <div>
-              <h2>Private Groups</h2>
-              <h3>Go party with your friends</h3>
+          <div class="right">
+            <div class="card" @click="openActivitiesOverview">
+              <div>
+                <h2>Private Groups</h2>
+                <p class="card-sub-header">Go party with your friends</p>
+              </div>
+              <img class="tour-card-image group" src="../assets/images/logo-group.png">
+              <h3 class="pricing">From €159,-</h3>
             </div>
-            <img class="tour-card-image group" src="../assets/images/logo-group.png">
-            <h3 class="pricing">From €159,-</h3>
           </div>
-        </div>
       </section>
+      <!-- <section class="review-section">
+        <div class="left">
+            <div class="review" @click="openTicketBroker">
+              <div>
+                <h2>Best pub crawl in Lisbon</h2>
+                <h3>Connect to new people</h3>
+              </div>
+              <h3 class="review-name">Jane Doe</h3>
+            </div>
+          </div>
+          <div class="right">
+            <div class="review" @click="openTicketBroker">
+              <div>
+                <h2>Best pub crawl in Lisbon</h2>
+                <h3>Connect to new people</h3>
+              </div>
+              <h3 class="review-name">Jane Doe</h3>
+            </div>
+          </div>
+      </section> -->
       </div>
     </div>
   </div>
@@ -97,6 +117,9 @@ defineComponent({
 <style lang="scss">
 @import '../design/variables.scss';
 
+.review-section{
+
+}
 .logo{
   margin: 30px;
   height: 70px;
@@ -127,6 +150,10 @@ defineComponent({
         display: flex;
         align-items: flex-start;
         width: 50%;
+        h1{
+                    max-width: 80%;
+
+        }
 
       }
       .hero-right{
@@ -167,7 +194,9 @@ defineComponent({
       .card{
         width: 80%;
         box-sizing: border-box;
-        background-color: #F0F0F0;
+        /* background-color: #F0F0F0; */
+        background: rgb(249,188,35);
+        background: linear-gradient(13deg, rgba(249,188,35,1) 0%, rgba(240,240,240,1) 47%);
         border-radius: 1em;
         aspect-ratio: 6/9;
         transition: all ease-in-out .2s;
@@ -188,9 +217,9 @@ defineComponent({
           font-family: Barricada;
           font-size: 2.3rem;
         }
-        h3{
+        .card-sub-header{
           color: #00000065;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
         }
         .tour-card-image{
           max-width: 90%;
@@ -248,7 +277,9 @@ defineComponent({
     }
     .ticket-button{
       margin-top: 20px;
-      background-color: #F9BC23;
+      /* background-color: #F9BC23; */
+      background: rgb(249,188,35);
+      background: linear-gradient(13deg, rgba(249,188,35,1) 0%, rgba(240,240,240,1) 120%);
       border: none;
       width: 275px;
       height: 75px;
@@ -259,7 +290,7 @@ defineComponent({
       transition: all .2s ease-out;
       box-shadow: inset -5px -5px 5px #00000025,  inset 2px 2px 5px #00000010;
       &:hover{
-        filter: brightness(110%);
+        filter: brightness(105%);
         transform: scale(1.01);
         box-shadow: inset -5px -5px 5px #00000045,  inset 2px 2px 5px #00000020;
       }
@@ -278,6 +309,7 @@ defineComponent({
         .hero-left{
           display: flex;
           align-items: flex-start;
+          justify-content: center;
           width: 100%;
   
         }
