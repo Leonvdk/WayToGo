@@ -55,7 +55,8 @@ defineComponent({
             src="../assets/images/photos/pubcrawl3.png"
           >
           </NCarousel>
-          
+          <NButton class="ticket-button" size="large" @click="openTicketBroker" attr-type="button" type="warning">Get your tickets</NButton>
+
         </section>
       <!-- <img class="midpage-logo" src="../assets/images/retro-logo-700px.png"> -->
       <section class="tours-section" id="tours-section">
@@ -86,8 +87,8 @@ defineComponent({
 </template>
 
 <style lang="scss">
-@import url(https://db.onlinewebfonts.com/c/0a3950f239bb0d70dc6601d71a7074d9?family=Barricada+W01+Regular);
 @import '../design/variables.scss';
+
 .logo{
   margin: 30px;
   height: 70px;
@@ -100,8 +101,6 @@ defineComponent({
   min-height: 100vh;
   margin: auto;
   box-sizing: border-box;
-
-  
 }
   .content-wrapper.daniel{
     min-height: 100%;
@@ -167,7 +166,6 @@ defineComponent({
           transform: scale(1.05);
           /* box-shadow: 5px 4px 20px #00000025; */
         }
-
         
         h2{
           font-family: Barricada;
@@ -224,7 +222,16 @@ defineComponent({
     }
     .ticket-button{
       margin-top: 20px;
+      width: 275px;
+      height: 75px;
+      font-size: 1.5rem;
       font-family: Barricada;
+      align-self: center;
+      margin-top: 50px;
+      border-radius: .5em;
+      &:hover{
+        filter: brightness(110%);
+      }
     }
   }
 
