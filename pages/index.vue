@@ -140,6 +140,11 @@ defineComponent({
           margin: 20px;
           min-width: max-content;
           white-space: nowrap;
+          transition: all ease-in-out .3s;
+
+          &:hover{
+            color: black;
+          }
         }
       }
     }
@@ -224,15 +229,19 @@ defineComponent({
     }
     .ticket-button{
       margin-top: 20px;
+      background-color: #F9BC23;
+      border: none;
       width: 275px;
       height: 75px;
       font-size: 1.5rem;
-      font-family: Barricada;
       align-self: center;
       margin-top: 50px;
       border-radius: .5em;
       &:hover{
         filter: brightness(110%);
+      }
+      * {
+        font-family: Barricada;
       }
     }
   }
