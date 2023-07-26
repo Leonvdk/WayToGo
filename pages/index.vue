@@ -25,10 +25,10 @@ defineComponent({
     <n-spin v-if="loading" size="large" />
     <div v-else>
       <a href="/">
-        <img class="logo" src="../assets/images/retro-logo-100px.png">
+        <img class="logo" src="../assets/images/retro-logo-700px.png">
       </a>
       <div class="content-wrapper daniel">
-        <div class="hero">
+        <section class="hero">
           <div class="hero-left">
             <h1>Are you ready to unleash your inner party animal !?</h1>
           </div>
@@ -39,27 +39,26 @@ defineComponent({
             <a href="https://waytogopubcrawl.myshopify.com/" target=”_blank”>Shop →</a>
           </div>
           </div>
-        </div>
-        <!-- <NCarousel id="carousel" show-arrow autoplay class="carousel">
-        <img
-          class="carousel-img"
-          src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
-        >
-        <img
-          class="carousel-img"
-          src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg"
-        >
-        <img
-          class="carousel-img"
-          src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg"
-        >
-        <img
-          class="carousel-img"
-          src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg"
-        >
-        </NCarousel> -->
-<!--         <NButton class="ticket-button" ghost size="large" @click="openTicketBroker" attr-type="button">Get your tickets now</NButton> -->
-      <img class="midpage-logo" src="../assets/images/retro-logo-700px.png">
+        </section>
+        <section>
+          <NCarousel id="carousel" show-arrow autoplay class="carousel">
+          <img
+            class="carousel-img"
+            src="../assets/images/photos/pubcrawl1.png"
+          >
+          <img
+            class="carousel-img"
+            src="../assets/images/photos/pubcrawl2.png"
+          >
+          <img
+            class="carousel-img"
+            src="../assets/images/photos/pubcrawl3.png"
+          >
+          </NCarousel>
+          <!--         <NButton class="ticket-button" ghost size="large" @click="openTicketBroker" attr-type="button">Get your tickets now</NButton> -->
+
+        </section>
+      <!-- <img class="midpage-logo" src="../assets/images/retro-logo-700px.png"> -->
       <section class="tours-section" id="tours-section">
         <div class="left">
           <div class="card" @click="openTicketBroker">
@@ -100,15 +99,12 @@ defineComponent({
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  max-width: 1200px;
   margin: auto;
   box-sizing: border-box;
 
   
 }
   .content-wrapper.daniel{
-    box-sizing: border-box;
-    padding: 70px 25px;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -217,6 +213,7 @@ defineComponent({
         width: 100%;
         margin: 0;
         object-fit: cover;
+        aspect-ratio: 16/9;
       }
     }
     .midpage-logo{
