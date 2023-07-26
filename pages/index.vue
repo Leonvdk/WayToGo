@@ -67,7 +67,7 @@ defineComponent({
               <h3>Connect to new people</h3>
             </div>
             <img class="tour-card-image" src="../assets/images/retro-logo-700px.png">
-            <h3 class="pricing">€18,00</h3>
+            <h3 class="pricing">€18,-</h3>
           </div>
         </div>
         <div class="right">
@@ -76,8 +76,8 @@ defineComponent({
               <h2>Group Activities</h2>
               <h3>Exciting tours around Lisbon</h3>
             </div>
-            <img class="tour-card-image" src="../assets/images/retro-logo-700px.png">
-            <h3 class="pricing">Activities differ in price</h3>
+            <img class="tour-card-image" src="../assets/images/wine-glasses.png">
+            <h3 class="pricing">From €159,-</h3>
           </div>
         </div>
       </section>
@@ -184,7 +184,7 @@ defineComponent({
         .pricing{
           justify-self: flex-end;
           font-weight: 300;
-          font-size: 1.2rem;
+          font-size: 1.8rem;
         }
       }
       .left{
