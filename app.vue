@@ -8,6 +8,7 @@ import {
   // component
   NButton
 } from 'naive-ui'
+import { useSeoMeta } from 'unhead';
 
 const naive = create({
   components: [NButton]
@@ -17,6 +18,12 @@ useHead({
   meta: [
     { name: 'The best Lisbon pub crawl', content: 'Info on the best pub crawl in Lisbon' }
   ]
+})
+useSeoMeta({
+  ogTitle: 'Pub Crawl Lisbon',
+  description: 'We know the way to go! Join us on an amazing night out!',
+  ogDescription: 'We know the way to go! Join us on an amazing night out!',
+  ogImage: 'https://way2gopubcrawl.com/_nuxt/retro-logo-700px.2e5c3e89.png',
 })
 
 const app = createApp()
