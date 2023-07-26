@@ -68,17 +68,17 @@ defineComponent({
               <h2>Pub Crawl</h2>
               <h3>Connect to new people</h3>
             </div>
-            <img class="tour-card-image" src="../assets/images/logo-group.png">
+            <img class="tour-card-image" src="../assets/images/retro-logo-700px.png">
             <h3 class="pricing">€18,-</h3>
           </div>
         </div>
         <div class="right">
           <div class="card" @click="openActivitiesOverview">
             <div>
-              <h2>Group Activities</h2>
-              <h3>Exciting tours around Lisbon</h3>
+              <h2>Private Groups</h2>
+              <h3>Go party with your friends</h3>
             </div>
-            <img class="tour-card-image wine" src="../assets/images/wine-glasses.png">
+            <img class="tour-card-image wine" src="../assets/images/logo-group.png">
             <h3 class="pricing">From €159,-</h3>
           </div>
         </div>
@@ -136,7 +136,7 @@ defineComponent({
         a{
           text-decoration: none;
           color: #888888;
-          font-size: 2em;
+          font-size: 1.7em;
           margin: 20px;
           min-width: max-content;
           white-space: nowrap;
