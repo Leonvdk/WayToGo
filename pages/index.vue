@@ -22,7 +22,7 @@ defineComponent({
 
 <template>
   <div class="page-wrapper">
-    <n-spin v-if="loading" size="large" />
+    <n-spin v-if="loading" size="large" stroke="#F9BC23"/>
     <div v-else>
       <a href="/">
         <img class="logo" src="../assets/images/retro-logo-700px.png">
@@ -40,7 +40,7 @@ defineComponent({
           </div>
           </div>
         </section>
-        <section>
+        <section class="carousel-section">
           <NCarousel id="carousel" show-arrow autoplay class="carousel">
           <img
             class="carousel-img"
@@ -55,8 +55,7 @@ defineComponent({
             src="../assets/images/photos/pubcrawl3.png"
           >
           </NCarousel>
-           <NButton class="ticket-button" ghost size="large" @click="openTicketBroker" attr-type="button">Get your tickets</NButton>
-
+          
         </section>
       <!-- <img class="midpage-logo" src="../assets/images/retro-logo-700px.png"> -->
       <section class="tours-section" id="tours-section">
@@ -66,7 +65,7 @@ defineComponent({
               <h2>Pub Crawl</h2>
               <h3>Connect to new people</h3>
             </div>
-            <img class="tour-card-image" src="../assets/images/retro-logo-700px.png">
+            <img class="tour-card-image" src="../assets/images/logo-group.png">
             <h3 class="pricing">€18,-</h3>
           </div>
         </div>
@@ -76,7 +75,7 @@ defineComponent({
               <h2>Group Activities</h2>
               <h3>Exciting tours around Lisbon</h3>
             </div>
-            <img class="tour-card-image" src="../assets/images/wine-glasses.png">
+            <img class="tour-card-image wine" src="../assets/images/wine-glasses.png">
             <h3 class="pricing">From €159,-</h3>
           </div>
         </div>
@@ -142,6 +141,9 @@ defineComponent({
           white-space: nowrap;
         }
       }
+    }
+    .carousel-section{
+      flex-direction: column;
     }
     .tours-section{
       display: flex;
@@ -270,7 +272,7 @@ defineComponent({
           width: 100%;
           background-color: #afb5c165;
           border-radius: 1.5em;
-          aspect-ratio: 6/9;
+          aspect-ratio: 6/7;
           padding: 10% 10%;
   
           .tour-card-image{
@@ -278,6 +280,11 @@ defineComponent({
             align-self: flex-end;
             position: relative;
             left: 15%;
+            &.wine{
+              height: 60%;
+              opacity: 80%;
+              margin-top: 20px;
+            }
           }
           .pricing{
             justify-self: flex-end;
