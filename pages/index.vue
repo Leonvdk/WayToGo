@@ -321,7 +321,6 @@ defineComponent({
     }
 
     .carousel{
-      margin-top: 100px;
       width: 100%;
       aspect-ratio: 16/9;
       border-radius: .5em;
@@ -494,7 +493,6 @@ defineComponent({
         }
       }
       .carousel{
-        margin-top: 100px;
         width: 100%;
         aspect-ratio: 9/16;
         .carousel-img {
