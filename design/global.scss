@@ -42,10 +42,14 @@ html{
   }
 
   section{
+    width: 100%;
     max-width: 1400px;
-    padding: 55px 3vw;
+    padding: 55px 10vw;
     display:flex;
     position: relative;
+    &#inner-shadow-companion{
+      padding:0
+    }
   }
 }
 
