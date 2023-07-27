@@ -6,7 +6,7 @@ const openTicketBroker = () => {
   window.open('https://GoldmanSouza.zaui.net/booking/web/#/default/activity/4?', '_blank');
 }
 const openActivitiesOverview = () => {
-  window.open('https://goldmansouza.zaui.net/booking/web/#/default/activities?date=2023-07-24', '_blank');
+  window.open('#contact-section');
 }
 const loading = ref(true);
 onMounted(() => {
@@ -80,14 +80,14 @@ defineComponent({
             </div>
           </div>
           <div class="right">
-            <div class="card" @click="openActivitiesOverview">
+            <a class="card" href="#contact-section">
               <div>
                 <h2>Private Groups</h2>
                 <p class="card-sub-header">Make it yours!</p>
               </div>
               <img class="tour-card-image group" src="../assets/images/logo-group.png">
               <h3 class="pricing">From €159,-</h3>
-            </div>
+            </a>
           </div>
       </section>
       <section class="review-section">
@@ -144,11 +144,10 @@ defineComponent({
             </div>
           </div>
       </section>
-      <section class="contact-section">
+      <section class="contact-section" id="contact-section">
         <h2>Get in touch</h2>
         <p>
-          We're happy to help with any questions or inquieries. Feel free to reach out through
-          the medium of your preference.
+          We're happy to help with any questions you have. For private pub crawls and other inquiries, feel free to reach out !
         </p>
         <div class="contact-buttons">
           <div class="button">
@@ -273,6 +272,8 @@ defineComponent({
         flex-direction: column;
         justify-content:space-between;
         padding: 10% 8%;
+        text-decoration: none;
+        color: black;
         cursor: pointer;
         box-shadow: inset -5px -5px 5px #00000025, inset 2px 2px 5px #00000010;
 
@@ -484,7 +485,7 @@ defineComponent({
           align-items: center;
           justify-content: flex-end;
           .button-wrapper{
-            align-self: flex-end;
+            align-self: center;
             margin-right: 0;
           }
           p{
