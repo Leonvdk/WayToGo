@@ -176,57 +176,7 @@ defineComponent({
 <style lang="scss">
 @import '../design/variables.scss';
 
-.contact-section{
-  flex-direction: column;
-  h2{
-    font-family: Barricada;
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-  }
-  p{
-    max-width: 400px;
-  }
-  .contact-buttons{
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
-    .button{
-      height: 50px;
-      width: 50px;
-      border-radius: 10rem;
-      background-color: #EFEFEF;
-      cursor: pointer;
-      transition: all ease-in-out .2s;
-      box-shadow: inset -5px -5px 5px #00000025, inset 2px 2px 5px #00000010;
-      padding: 12px;
-      &:hover{
-        transform: scale(1.01);
-        filter:brightness(105%);
-        box-shadow: inset -5px -5px 5px #00000045, inset 2px 2px 5px #00000020;
-      }
-      a{
-        height: 110%;
-        width: 110%;
-        border-radius: 15rem;
-        text-decoration: none;
-        color: black;
-        #email{
-          filter:invert(50%);
-        }
-      }
-      p{
-        font-size: 20px;
-        text-align: center;
-        width: 100;
-        font-weight: 800;
-        font-family: Barricada;
-      }
-      img{
-        max-height: 100%;
-      }
-    }
-  }
-}
+
 
 .logo{
   margin: 30px;
@@ -274,11 +224,12 @@ defineComponent({
         h2{
           margin-bottom: 15px;
           max-width: 80%;
+          font-weight: 600;
         }
         p{
           margin-bottom: 40px;
           max-width: 80%;
-
+          font-size: 1.2rem;
         }
         .button-wrapper{
           align-self: flex-end;
@@ -460,6 +411,57 @@ defineComponent({
       
       }
     }
+    .contact-section{
+  flex-direction: column;
+  h2{
+    font-family: Barricada;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  p{
+    max-width: 400px;
+  }
+  .contact-buttons{
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    .button{
+      height: 50px;
+      width: 50px;
+      border-radius: 10rem;
+      background-color: #EFEFEF;
+      cursor: pointer;
+      transition: all ease-in-out .2s;
+      box-shadow: inset -5px -5px 5px #00000025, inset 2px 2px 5px #00000010;
+      padding: 12px;
+      &:hover{
+        transform: scale(1.01);
+        filter:brightness(105%);
+        box-shadow: inset -5px -5px 5px #00000045, inset 2px 2px 5px #00000020;
+      }
+      a{
+        height: 110%;
+        width: 110%;
+        border-radius: 15rem;
+        text-decoration: none;
+        color: black;
+        #email{
+          filter:invert(50%);
+        }
+      }
+      p{
+        font-size: 20px;
+        text-align: center;
+        width: 100;
+        font-weight: 800;
+        font-family: Barricada;
+      }
+      img{
+        max-height: 100%;
+      }
+    }
+  }
+}
   }
 //-------------------------------------------MOBILE-----------------------------
   @media only screen and (max-width: 767px){
@@ -485,6 +487,9 @@ defineComponent({
           .button-wrapper{
             align-self: flex-end;
             margin-right: 0;
+          }
+          p{
+            font-size: 1.5rem;
           }
         }
       }
