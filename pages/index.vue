@@ -5,9 +5,7 @@ import { defineComponent, onMounted, ref } from 'vue';
 const openTicketBroker = () => {
   window.open('https://GoldmanSouza.zaui.net/booking/web/#/default/activity/4?', '_blank');
 }
-const openActivitiesOverview = () => {
-  window.open('#contact-section');
-}
+
 const loading = ref(true);
 onMounted(() => {
   setTimeout(() => loading.value = false, 1000)
@@ -38,11 +36,17 @@ defineComponent({
       <div class="content-wrapper daniel">
         <section class="hero">
           <div class="hero-left">
-            <h1>The Lisbon pub crawl</h1>
+            <h1>Way 2 Go pub crawl</h1>
           </div>
           <div class="hero-right">
             <h2>Are you ready to unleash your inner party animal !?</h2>
-            <p>Ready to paint Lisbon tipsy? Pub crawl like a pro with 4 local bars, free club entry, unlimited beer, sangria, and shots. Meet internationals, mingle with locals, and dance like there's no tomorrow!</p>
+            <p>
+              Ready to paint Lisbon tipsy? Pub crawl like a pro with;
+              <br> 
+              <b class="yellow-underline">4 local bars, free club entry, unlimited beer, sangria, and shots.</b><br> 
+              Meet internationals, mingle with locals, and dance 
+              like there's no tomorrow!
+            </p>
           <div class="button-wrapper">
             <a href="#tours-section">Explore ↓</a>
             <a href="https://waytogopubcrawl.myshopify.com/collections/all" target=”_blank”>T-shirts →</a>
@@ -73,10 +77,10 @@ defineComponent({
             <div class="card" @click="openTicketBroker">
               <div>
                 <h2>Pub Crawl</h2>
-                <p class="card-sub-header">Lets Paint the Town tipsy!</p>
+                <p class="card-sub-header">Lets paint the town tipsy!</p>
               </div>
               <img class="tour-card-image" src="../assets/images/retro-logo-700px.png">
-              <h3 class="pricing">€18,- p.p</h3>
+              <h3 class="pricing">€18 p.p</h3>
             </div>
           </div>
           <div class="right">
@@ -86,7 +90,7 @@ defineComponent({
                 <p class="card-sub-header">Make it yours!</p>
               </div>
               <img class="tour-card-image group" src="../assets/images/logo-group.png">
-              <h3 class="pricing">From €159,-</h3>
+              <h3 class="pricing">Let's go private</h3>
             </a>
           </div>
       </section>
@@ -161,6 +165,11 @@ defineComponent({
             </a>
           </div>
           <div class="button">
+            <a href="https://www.tiktok.com/@way2go.pubcrawl?_t=8eN5jB0iOiI&_r=1" target=”_blank”>
+              <img src="../assets/images/icons/tiktok.svg" />
+            </a>
+          </div>
+          <div class="button">
             <a href="mailto:waytogolisbontours@gmail.com" target=”_blank”>
               <img id="email" src="../assets/images/icons/email.svg" />
             </a>
@@ -227,6 +236,7 @@ defineComponent({
         }
         p{
           margin-bottom: 40px;
+          line-height: 1.3rem;
           max-width: 80%;
           font-size: 1.2rem;
         }
@@ -317,6 +327,9 @@ defineComponent({
         
         .card{
           margin-top: 150px;
+          .tour-card-image{
+            margin-bottom: 10px;
+          }
         }
       }
     }
@@ -490,6 +503,8 @@ defineComponent({
           }
           p{
             font-size: 1.5rem;
+            line-height: 1.6rem;
+
           }
         }
       }

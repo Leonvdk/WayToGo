@@ -40,6 +40,9 @@ html{
     font-size: 2rem;
     
   }
+  b{
+    font-weight: 900;
+  }
 
   section{
     width: 100%;
@@ -51,29 +54,8 @@ html{
       padding:0
     }
   }
+
+  .yellow-underline{
+    text-decoration: underline 1px #F9BC23;
+  }
 }
-
-
-
-// //------------- RESPONSIVE TEXT SCALING SECTION -------------------------
-//   html { 
-//     font-size: 1.125rem; 
-//   }
-
-//   @media screen and (max-width:1441px) 
-//   { 
-//     html { 
-//       font-size: calc(-179.00000000000384rem + 200.00000000000426vw); 
-//     } 
-// }
-//   @media screen and (max-width:10px) { 
-//     html { 
-//       font-size: calc(0.8126951092611863rem + 0.20811654526534862vw); 
-//     } 
-//   }
-//   @media screen and (max-width:479px) { 
-//     html { 
-//       font-size: calc(0.7494769874476988rem + 0.8368200836820083vw); 
-//     } 
-//   }
-
