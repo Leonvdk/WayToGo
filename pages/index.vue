@@ -184,12 +184,11 @@ defineComponent({
 <style lang="scss">
 @import '../design/variables.scss';
 
-
-
 .logo{
   margin: 30px;
   height: 70px;
   width: auto;
+  position: sticky;
 }
 .page-wrapper{
   display: flex;
@@ -218,6 +217,7 @@ defineComponent({
         width: 50%;
         h1{
           max-width: 80%;
+          font-weight: 700;
 
         }
 
@@ -271,6 +271,7 @@ defineComponent({
       align-items: center;
       .card{
         width: 90%;
+        max-height: 90vh;
         box-sizing: border-box;
         /* background-color: #F0F0F0; */
         background: rgb(249,188,35);
@@ -359,8 +360,7 @@ defineComponent({
     }
     .ticket-button{
       margin-top: 20px;
-      /* background-color: #F9BC23; */
-      background: rgb(249,188,35);
+      background: $primary-color;
       border: none;
       width: 275px;
       height: 75px;
@@ -442,7 +442,7 @@ defineComponent({
       height: 50px;
       width: 50px;
       border-radius: 10rem;
-      background-color: #EFEFEF;
+      background-color: $primary-color;
       cursor: pointer;
       transition: all ease-in-out .2s;
       box-shadow: inset -5px -5px 5px #00000025, inset 2px 2px 5px #00000010;
@@ -459,7 +459,7 @@ defineComponent({
         text-decoration: none;
         color: black;
         #email{
-          filter:invert(50%);
+          filter:invert(100%);
         }
       }
       p{
@@ -529,7 +529,7 @@ defineComponent({
           width: 100%;
           aspect-ratio: 6/6;
           padding: 10% 10%;
-          background: rgb(249,188,35);
+          background: $primary-color;
           background: linear-gradient(13deg, rgba(249,188,35,1) 0%, rgba(240,240,240,1) 60%);
 
           .tour-card-image{

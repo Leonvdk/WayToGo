@@ -8,7 +8,7 @@ export default {
     '@/design/fluid-font-size.scss',
   ],
     loading: {
-    color: '#F6C20E',
-    height: '5px'
-  }
+      color: '#F6C20E',
+      height: '5px'
+  },
 };
