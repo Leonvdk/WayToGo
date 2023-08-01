@@ -4,11 +4,11 @@ import { defineComponent, onMounted, ref } from 'vue';
 import { event, pageview } from 'vue-gtag';
 
 onMounted(()=>{
-    pageview({ page_path: '/' })
+    // pageview({ page_path: '/' })
 })
 
 const openTicketBroker = () => {
-  event('clickedTicketLink', { method: 'Google' })
+  // event('clickedTicketLink', { method: 'Google' })
   window.open('https://GoldmanSouza.zaui.net/booking/web/#/default/activity/4?', '_blank');
 }
 
