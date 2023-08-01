@@ -1,26 +1,26 @@
 <script lang="ts" setup>
 import { NButton, NCarousel, NSpin } from 'naive-ui';
 import { defineComponent, onMounted, ref } from 'vue';
+import { event, pageview } from 'vue-gtag';
+
+onMounted(()=>{
+    pageview({ page_path: '/' })
+})
 
 const openTicketBroker = () => {
+  event('clickedTicketLink', { method: 'Google' })
   window.open('https://GoldmanSouza.zaui.net/booking/web/#/default/activity/4?', '_blank');
 }
 
 const loading = ref(true);
 onMounted(() => {
   setTimeout(() => loading.value = false, 1000)
-  
 })
 
 defineComponent({
   name: 'Home',
 });
 
-({
-  title: 'My App',
-  meta: [
-    { name: 'description', content: 'My amazing site.' }
-  ]})
 
 
 

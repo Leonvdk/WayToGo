@@ -26,7 +26,9 @@ useSeoMeta({
   ogImage: 'https://way2gopubcrawl.com/_nuxt/retro-logo-700px.2e5c3e89.png',
 })
 
-const app = createApp()
+const app = createApp(App).use(VueGtag, {
+  config: { id: "G-8YSVWX6MCT" }
+}).mount("#app");
 app.use(naive)
 </script>
 
