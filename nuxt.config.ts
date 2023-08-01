@@ -2,6 +2,7 @@
 export default {
   nitro: {
     preset: 'vercel-edge',
+    // plugins: ['~/plugins/hotjar']
   },
   css: [
     '@/design/reset.scss',

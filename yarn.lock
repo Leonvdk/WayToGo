@@ -4401,6 +4401,11 @@
   "resolved" "https://registry.npmjs.org/vue-gtag/-/vue-gtag-2.0.1.tgz"
   "version" "2.0.1"
 
+"vue-hotjar-next@^1.4.0":
+  "integrity" "sha512-ZWLkTClEHDThzNQjiPZ3ooNiJqL+Z8MeBboA02iaNm+kdSFi0pxT7XXM7ehI+ddliHoHGv9yXWD3evA8NOOUMQ=="
+  "resolved" "https://registry.npmjs.org/vue-hotjar-next/-/vue-hotjar-next-1.4.0.tgz"
+  "version" "1.4.0"
+
 "vue-router@^4.1.6":
   "integrity" "sha512-DYWYwsG6xNPmLq/FmZn8Ip+qrhFEzA14EI12MsMgVxvHFDYvlr4NXpVF5hrRH1wVcDP8fGi5F4rxuJSl8/r+EQ=="
   "resolved" "https://registry.npmjs.org/vue-router/-/vue-router-4.1.6.tgz"
