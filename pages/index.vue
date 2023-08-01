@@ -4,11 +4,11 @@ import { defineComponent, onMounted, ref } from 'vue';
 import { event, pageview } from 'vue-gtag';
 
 onMounted(()=>{
-    // pageview({ page_path: '/' })
+    pageview({ page_path: '/' })
 })
 
 const openTicketBroker = () => {
-  // event('clickedTicketLink', { method: 'Google' })
+  event('clickedTicketLink', { method: 'Google' })
   window.open('https://GoldmanSouza.zaui.net/booking/web/#/default/activity/4?', '_blank');
 }
 
@@ -22,14 +22,12 @@ defineComponent({
 });
 
 
-
-
 </script>
 
 <template>
   <div class="page-wrapper">
-    <n-spin v-if="loading" size="large" stroke="#F9BC23"/>
-    <div v-else>
+    <!-- <n-spin v-if="loading" size="large" stroke="#F9BC23"/> -->
+    <div >
       <a href="/">
         <img class="logo" src="../assets/images/retro-logo-700px.png">
       </a>
@@ -69,7 +67,7 @@ defineComponent({
           >
           </NCarousel>
           <NButton class="ticket-button" size="large" @click="openTicketBroker" attr-type="button" type="warning" :bordered="false">Get your tickets</NButton>
-          <img class="water-mark" src="../assets/images/retro-logo-700px.png">
+          <!-- <img class="water-mark" src="../assets/images/retro-logo-700px.png"> -->
 
         </section>
         <section class="tours-section" id="tours-section">

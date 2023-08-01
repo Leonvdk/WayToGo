@@ -11,6 +11,8 @@ declare module '@nuxt/schema' {
 
       cdnURL: string,
    },
+
+   gaId: string,
   }
   interface PublicRuntimeConfig {
 

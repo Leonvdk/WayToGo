@@ -9,14 +9,20 @@ import {
   NButton
 } from 'naive-ui'
 import { useSeoMeta } from 'unhead';
+import VueGtag from 'vue-gtag';
 
 const naive = create({
   components: [NButton]
 })
+
+const config = useRuntimeConfig()
+
+
 useHead({
   title: 'Pub Crawl Lisbon',
   meta: [
-    { name: 'The best Lisbon pub crawl', content: 'Info on the best pub crawl in Lisbon' }
+    { name: 'The best Lisbon pub crawl', 
+    content: 'Info on the best pub crawl in Lisbon' }
   ]
 })
 useSeoMeta({
@@ -27,10 +33,8 @@ useSeoMeta({
 })
 
 const app = createApp();
-// const app = createApp(App).use(VueGtag, {
-//   config: { id: "G-8YSVWX6MCT" }
-// }).mount("#app");
-app.use(naive)
+app.use(naive);
+app.use(VueGtag, {config: { id: 'G-8YSVWX6MCT' }})
 </script>
 
 <template>
