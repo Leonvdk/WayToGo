@@ -428,7 +428,7 @@
   "resolved" "https://registry.npmjs.org/@nuxt/devalue/-/devalue-2.0.0.tgz"
   "version" "2.0.0"
 
-"@nuxt/kit@^3.0.0-rc.14", "@nuxt/kit@^3.2.2":
+"@nuxt/kit@^3.0.0", "@nuxt/kit@^3.0.0-rc.14", "@nuxt/kit@^3.2.2":
   "integrity" "sha512-X1WN76izsILva6TvQVTfJCHG7TXCwsB6jsxZKcU3qSog26jer5dildDb5ZmKL3e+IFD6BwK4ShO/py8VZcT6OA=="
   "resolved" "https://registry.npmjs.org/@nuxt/kit/-/kit-3.6.2.tgz"
   "version" "3.6.2"
@@ -577,6 +577,14 @@
     "vite-node" "^0.25.2"
     "vite-plugin-checker" "^0.5.1"
     "vue-bundle-renderer" "^1.0.0"
+
+"@nuxtjs/robots@^3.0.0":
+  "integrity" "sha512-qsHGW1KXBvV5Kq7u3huPnFCUTbHS4Fk8Za2mNPgmUXcwLgp3exvhPtdZfIdjrCF/aZk3A8OZONNmGghs6CecBA=="
+  "resolved" "https://registry.npmjs.org/@nuxtjs/robots/-/robots-3.0.0.tgz"
+  "version" "3.0.0"
+  dependencies:
+    "@nuxt/kit" "^3.0.0"
+    "h3" "^1.0.1"
 
 "@rollup/plugin-alias@^4.0.2":
   "integrity" "sha512-1hv7dBOZZwo3SEupxn4UA2N0EDThqSSS+wI1St1TNTBtOZvUchyIClyHcnDcjjrReTPZ47Faedrhblv4n+T5UQ=="

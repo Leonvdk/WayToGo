@@ -4,6 +4,7 @@ declare module 'nitropack' {
   interface InternalApi {
     '/api/gpt': Awaited<ReturnType<typeof import('../../server/api/gpt').default>>
     '/__nuxt_error': Awaited<ReturnType<typeof import('../../node_modules/nuxt/dist/core/runtime/nitro/renderer').default>>
+    '/robots.txt': Awaited<ReturnType<typeof import('../../node_modules/@nuxtjs/robots/dist/runtime/server/middleware').default>>
   }
 }
 declare global {

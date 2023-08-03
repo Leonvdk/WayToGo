@@ -1,5 +1,8 @@
 
 export default {
+  modules: [
+    '@nuxtjs/robots',
+  ],
   nitro: {
     preset: 'vercel-edge',
     // plugins: ['~/plugins/hotjar']

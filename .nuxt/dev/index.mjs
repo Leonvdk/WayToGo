@@ -5,7 +5,7 @@ import { join } from 'path';
 import { mkdirSync } from 'fs';
 import { parentPort, threadId } from 'worker_threads';
 import { provider, isWindows } from 'file:///Users/leonvandeklundert/Leonvdk/Projects/WayToGo/node_modules/std-env/dist/index.mjs';
-import { eventHandler, setHeaders, sendRedirect, defineEventHandler, handleCacheHeaders, createEvent, getRequestHeader, getRequestHeaders, setResponseHeader, createApp, createRouter as createRouter$1, lazyEventHandler, toNodeListener, getQuery, createError } from 'file:///Users/leonvandeklundert/Leonvdk/Projects/WayToGo/node_modules/h3/dist/index.mjs';
+import { eventHandler, setHeaders, sendRedirect, defineEventHandler, handleCacheHeaders, createEvent, getRequestHeader, getRequestHeaders, setResponseHeader, setHeader, createApp, createRouter as createRouter$1, lazyEventHandler, toNodeListener, getQuery, createError } from 'file:///Users/leonvandeklundert/Leonvdk/Projects/WayToGo/node_modules/h3/dist/index.mjs';
 import axios from 'file:///Users/leonvandeklundert/Leonvdk/Projects/WayToGo/node_modules/axios/index.js';
 import { createRenderer } from 'file:///Users/leonvandeklundert/Leonvdk/Projects/WayToGo/node_modules/vue-bundle-renderer/dist/runtime.mjs';
 import devalue from 'file:///Users/leonvandeklundert/Leonvdk/Projects/WayToGo/node_modules/@nuxt/devalue/dist/devalue.mjs';
@@ -21,6 +21,7 @@ import { createStorage } from 'file:///Users/leonvandeklundert/Leonvdk/Projects/
 import unstorage_47drivers_47fs from 'file:///Users/leonvandeklundert/Leonvdk/Projects/WayToGo/node_modules/unstorage/dist/drivers/fs.mjs';
 import defu from 'file:///Users/leonvandeklundert/Leonvdk/Projects/WayToGo/node_modules/defu/dist/defu.mjs';
 import { toRouteMatcher, createRouter } from 'file:///Users/leonvandeklundert/Leonvdk/Projects/WayToGo/node_modules/radix3/dist/index.mjs';
+import robots from '/Users/leonvandeklundert/Leonvdk/Projects/WayToGo/.nuxt/robots.mjs';
 
 const _runtimeConfig = {"app":{"baseURL":"/","buildAssetsDir":"/_nuxt/","cdnURL":""},"nitro":{"routeRules":{"/__nuxt_error":{"cache":false}},"envPrefix":"NUXT_"},"public":{},"gaId":""};
 const ENV_PREFIX = "NITRO_";
@@ -455,12 +456,85 @@ const errorHandler = (async function errorhandler(error, event) {
   event.node.res.end(await res.text());
 });
 
+const _YD2RWs = defineEventHandler(async (event) => {
+  setHeader(event, "Content-Type", "text/plain");
+  return render(await getRules(robots, event.req));
+});
+var Correspondence = /* @__PURE__ */ ((Correspondence2) => {
+  Correspondence2[Correspondence2["User-agent"] = 0] = "User-agent";
+  Correspondence2[Correspondence2["Crawl-delay"] = 1] = "Crawl-delay";
+  Correspondence2[Correspondence2["Disallow"] = 2] = "Disallow";
+  Correspondence2[Correspondence2["Allow"] = 3] = "Allow";
+  Correspondence2[Correspondence2["Host"] = 4] = "Host";
+  Correspondence2[Correspondence2["Sitemap"] = 5] = "Sitemap";
+  Correspondence2[Correspondence2["Clean-param"] = 6] = "Clean-param";
+  Correspondence2[Correspondence2["Comment"] = 7] = "Comment";
+  Correspondence2[Correspondence2["BlankLine"] = 8] = "BlankLine";
+  return Correspondence2;
+})(Correspondence || {});
+function render(rules) {
+  return rules.map((rule) => {
+    const value = String(rule.value).trim();
+    switch (rule.key.toString()) {
+      case Correspondence[7 /* Comment */]:
+        return `# ${value}`;
+      case Correspondence[8 /* BlankLine */]:
+        return "";
+      default:
+        return `${rule.key}: ${value}`;
+    }
+  }).join("\n");
+}
+async function getRules(options, req) {
+  const correspondences = {
+    useragent: "User-agent",
+    crawldelay: "Crawl-delay",
+    disallow: "Disallow",
+    allow: "Allow",
+    host: "Host",
+    sitemap: "Sitemap",
+    cleanparam: "Clean-param",
+    comment: "Comment",
+    blankline: "BlankLine"
+  };
+  const rules = [];
+  const parseRule = (rule) => {
+    const parsed = {};
+    for (const [key, value] of Object.entries(rule)) {
+      parsed[String(key).toLowerCase().replace(/[\W_]+/g, "")] = value;
+    }
+    return parsed;
+  };
+  for (const rule of Array.isArray(options) ? options : [options]) {
+    const parsed = parseRule(rule);
+    const keys = Object.keys(correspondences).filter((key) => typeof parsed[key] !== "undefined");
+    for (const key of keys) {
+      const parsedKey = parsed[key];
+      let values;
+      values = typeof parsedKey === "function" ? await parsedKey(req) : parsedKey;
+      values = Array.isArray(values) ? values : [values];
+      for (const value of values) {
+        const v = typeof value === "function" ? await value(req) : value;
+        if (v === false) {
+          continue;
+        }
+        rules.push({
+          key: correspondences[key],
+          value: v
+        });
+      }
+    }
+  }
+  return rules;
+}
+
 const _lazy_v3iW3g = () => Promise.resolve().then(function () { return gpt$1; });
 const _lazy_VIZGlT = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
   { route: '/api/gpt', handler: _lazy_v3iW3g, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_VIZGlT, lazy: true, middleware: false, method: undefined },
+  { route: '/robots.txt', handler: _YD2RWs, lazy: false, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_VIZGlT, lazy: true, middleware: false, method: undefined }
 ];
 
